@@ -1,0 +1,9 @@
+:host {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.profile-content__wrapper {
+  display: grid;
+  grid-gap: 8px;
+}

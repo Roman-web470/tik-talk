@@ -1,0 +1,199 @@
+@import 'fonts.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --dark-color: #000;
+  --dark-avtive-color: #161616;
+  --light-color: #fff;
+  --primary-color: #ae7aff;
+  --grey-color: #5f646d;
+  --dark-hover-color: #161616;
+  --light-border: 1px solid var(--light-color);
+  --light-transparent-color: rgba(255, 255, 255, 0.75);
+  --message-color: #404040;
+}
+
+body {
+  height: 100dvh;
+  background: var(--dark-color);
+  color: var(--light-color);
+  font-family: 'JetBrains Mono', sans-serif;
+  background: url(/assets/img/background.jpg) no-repeat center center fixed;
+}
+
+.h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
+}
+
+.h6 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+}
+
+.regular-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.medium-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.btn {
+  width: 100%;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-color);
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-color);
+  background: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.svg-16 {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-shadow {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    z-index: -1;
+    background: var(--grey-color);
+  }
+}
+
+.skill-tag {
+  max-height: 24px;
+  padding: 4px 8px;
+  margin-right: 4px;
+  border-radius: 4px;
+  border: 2px solid var(--light-color);
+  font-size: 12px;
+  font-weight: 700;
+  display: inline;
+}
+
+.tt-control-label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+}
+
+.tt-input {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  padding: 12px 20px;
+  color: var(--light-color);
+  background: var(--dark-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: 'JetBrains Mono', sans-serif;
+  margin-top: 8px;
+}
+
+.tt-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tt-form-label__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.tt-form-input {
+  width: 100%;
+  height: 33px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  border: none;
+  border-bottom: 1px solid var(--light-color);
+  background: none;
+  color: var(--light-color);
+  outline: none;
+  transition: all 0.8s ease;
+
+  &:focus-visible {
+    width: calc(100% + 6px);
+    border-bottom: 1px solid var(--primary-color);
+    transition: all 0.8s ease;
+    margin-left: -3px;
+  }
+}
+
+.tt-textarea {
+  height: 84px;
+  resize: none;
+}

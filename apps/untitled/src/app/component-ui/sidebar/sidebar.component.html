@@ -1,0 +1,44 @@
+<svg icon="logo-mini"></svg>
+
+<nav>
+  <ul class="main-menu-list mb-20">
+    @for (menuItem of menuItems; track menuItem.icon){
+    <li>
+      <a
+        [routerLink]="menuItem.link"
+        routerLinkActive="active"
+        class="menu-item"
+      >
+        <svg [icon]="menuItem.icon" class="menu-item__icon"></svg>
+        <span>{{ menuItem.label }}</span>
+      </a>
+    </li>
+    }
+  </ul>
+</nav>
+
+<p class="medium-text mb-20">Подписчики</p>
+@for (profile of subscribers$ | async; track profile) {
+<app-subscriber-card [profile]="profile"> </app-subscriber-card>
+}
+
+<div class="mt-20 to-subscribers">
+  <a [routerLink]="['/subscribers']" class="to-subscribers__link"
+    >Все подписчики</a
+  >
+  <svg icon="arrow" class="to-subscribers__svg"></svg>
+</div>
+
+<footer class="sidebar-footer">
+  @if (me(); as me) { @if (me.avatarUrl) {
+  <img [src]="me.avatarUrl | imgUrl" class="footer-user-img" alt="" />
+  } @else {
+  <img src="/assets/svg/account_circle.svg" class="footer-user-img" alt="" />
+  }
+  <div class="medium-text footer-user-text">{{ me.username }}</div>
+  <a [routerLink]="['/settings-page']" class="settings-btn">
+    <svg icon="settings"></svg>
+  </a>
+
+  }
+</footer>

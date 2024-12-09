@@ -1,0 +1,9 @@
+:host {
+  border-right: var(--light-border);
+  display: block;
+}
+
+.chats-input-filter__wrapper {
+  padding: 16px 28px;
+  border-bottom: var(--light-border);
+}

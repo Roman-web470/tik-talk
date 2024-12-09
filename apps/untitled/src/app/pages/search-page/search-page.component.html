@@ -1,0 +1,8 @@
+<app-profile-filters></app-profile-filters>
+
+<div class="profile-content__wrapper">
+  @for (profile of profiles(); track profile.id) {
+  <app-profile-card [profile]="profile"></app-profile-card>
+  }
+  <router-outlet></router-outlet>
+</div>

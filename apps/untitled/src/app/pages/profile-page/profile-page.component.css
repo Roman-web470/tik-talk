@@ -1,0 +1,88 @@
+.profile-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.to-settings__btn {
+  width: 190px;
+  text-decoration: none;
+  gap: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.to-settings__icon {
+  width: 16px;
+  height: 16px;
+  color: var(--dark-color);
+}
+
+.profile-page__body {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  grid-gap: 64px;
+  margin-top: 24px;
+}
+
+.subscribers-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.subscriber-avatar__btn {
+  width: 36px;
+  height: 36px;
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+}
+
+.to-subscribers-search {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--light-color);
+  margin-left: 14px;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background: var(--dark-color);
+    top: 50%;
+    left: 50%;
+  }
+
+  &:before {
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  &:after {
+    transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  }
+}
+
+.stack-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.skill-tag {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  padding: 2px 8px 8px 8px;
+  display: grid;
+  place-items: center;
+}
